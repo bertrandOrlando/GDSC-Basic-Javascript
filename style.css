@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Helvetica, sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./img/bg-img.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a {
+  color: inherit;
+}
+p {
+  display: block;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+svg {
+  fill: grey;
+  vertical-align: middle;
+}
+nav {
+  width: 100%;
+  height: 80px;
+  border-bottom: 4px solid black;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+.home-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  height: auto;
+  display: absolute;
+  min-height: 80vh;
+}
+
+.search-menu {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+  gap: 1rem;
+}
+
+.search-menu .search-input {
+  padding: 1rem 2rem;
+  width: 50%;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+/* CSS */
+.search-btn {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 20px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.search-btn:active,
+.search-btn:hover {
+  outline: 0;
+}
+
+.search-btn span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 18px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+  font-size: 16px;
+}
+
+.search-btn:hover span {
+  background: none;
+}
+
+#cards {
+  width: 90%;
+  display: flex;
+  gap: 3.5rem 2rem;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 20rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 13px 15px 37px -5px rgba(0, 0, 0, 0.69);
+  -webkit-box-shadow: 13px 15px 37px -5px rgba(0, 0, 0, 0.69);
+  -moz-box-shadow: 13px 15px 37px -5px rgba(0, 0, 0, 0.69);
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+.item-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 0.3rem;
+}
+.card img {
+  width: 270px;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+}
+.card .time-desc {
+  display: inline-block;
+}
+
+.recipe {
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.recipe:hover {
+  color: red;
+}
+
+dialog {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 3rem;
+  margin: auto;
+  max-width: 600px;
+  max-height: 85vh;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+
+dialog::backdrop {
+  background: linear-gradient(45deg, red, blue, teal);
+  opacity: 0.5;
+}
+
+dialog .meal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+dialog .meal-title h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+dialog .meal-title img {
+  width: 50%;
+}
+
+dialog a {
+  cursor: pointer;
+  font-style: italic;
+  color: rgb(157, 0, 0);
+}
+dialog ul {
+  margin-left: 1rem;
+}
+
+footer {
+  margin-top: 3rem;
+  width: 100%;
+  height: 5rem;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .search-btn {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  dialog {
+    max-height: 80vh ;
+    max-width: 85%;
+  }
+}
